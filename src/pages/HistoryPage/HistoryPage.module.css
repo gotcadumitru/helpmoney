@@ -1,0 +1,96 @@
+.HistoryComponent{
+}
+.listItems{
+}
+.item {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-width: 165px;
+    width: 600px;
+    height: 50px;
+    letter-spacing: 0.5px;
+    line-height: 50px;
+    font-size: 15px;
+    background-color: black;
+    color: white;
+    text-transform: uppercase;
+    list-style-type: none;
+    font-weight: bolder;
+    border: none;
+    position: relative;
+}
+.item span{
+}
+.item:nth-child(2n){
+    background-color: white;
+    color: black;
+}
+.item:hover {
+      /* padding: 0 34px 0 34px; */
+      border: 1px solid black;
+      cursor: pointer;
+}
+.number{
+    width: 20px;
+}
+.dayAndMonth{
+    width: 200px;
+}
+.item::before{
+    content: '';
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+}
+.item:nth-child(2n):hover::before{
+    background-color: black;
+}
+.item:nth-child(2n-1):hover::before{
+    background-color: white;
+}
+.dropdown{
+    position: absolute;
+    display: none;
+    top: 100%;
+    z-index: 100;
+    width: calc(100% + 2px);
+    height: 150px;
+    border-bottom: 1px solid black;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+}
+
+.item:hover .dropdown{
+
+    display: flex;
+    justify-content: space-around;
+}
+.item:nth-child(2n):hover .dropdown{
+    background-color: white;
+    color: black;
+
+}
+.item:nth-child(2n-1):hover .dropdown{
+    background-color: black;
+    color: white;
+
+}
+
+@media screen and (max-width: 600px) {
+    .number {
+      display: none;
+    }
+    .item{
+        width: 300px;
+    }
+    .dayAndMonth{
+        width: 150px;
+        font-size: 10px;
+    }
+    .item:hover .dropdown{
+        font-size: 12px;
+    }
+
+  }

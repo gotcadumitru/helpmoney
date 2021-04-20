@@ -1,0 +1,10 @@
+.newDayComponent{
+    width: 500px;
+    position: relative;
+}
+
+@media screen and (max-width: 600px) {
+    .newDayComponent {
+        width: 250px;
+    }
+  }
